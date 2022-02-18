@@ -6,20 +6,21 @@ from __init__ import *
 
 if __name__ == '__main__':
     ##### result = process("../tests/data/Location History.zip")
-    result = process("../tests/data/Person6.zip")
+    
+    result = process("tests/data/Person5.zip")
     
     print("Summary:\n", result["summary"])
-    print("Dataframe\n\n", result["data_frames"])
-    print("Errors\n\n", result["errors"])
+    print("\n")
+    print("Total duration and distance for all the activities\n\n")
+    print(result["data_frame"])
+        
+    for k, v in result["data_frames_activity"].items():
+        print(k)
+        print(v.to_string(index=False))
+        print()
     
-    ## code to output the plot
-    ## plots the top N activities per quarter (overall top N)
-    ## We set N to 5
+    print("\nDuration per activity:\n")
+    print("Errors\n\n", result["errors"])
     print()
 
-    ## if the dataframe is empty print a message
-    if result["data_frames"][0].empty:
-        print("No data were processed from 2016 to 2021!")
-    else:
-        print("Visualisation\n")
-        activities_quarter_plot(result["data_frames"][0], 5)
+

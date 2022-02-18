@@ -21,15 +21,13 @@ YEARS = [2016, 2017, 2018, 2019, 2020, 2021]
 ####### MONTHS = ["JANUARY"]
 MONTHS = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"]
 
-
 TEXT = "This study examines the total amount of time spent in activities before and during the COVID-19 pandemic. \
 We therefore examined your Google semantic Location History data for 2016, 2017, 2018, 2019, \
 2020, and 2021. To be precise, we extracted per month and per year the total hours spent in activities as those were \
 recorded by Google such as walking, cycling and running. Also, we extracted \
-the number of days spent and the distance in km per activity type. \
-All the information we extracted is visible on the following table. On the plot \
-you can see the top 5 activities in terms of the overall time spent since 2016 per quarter (Q1 refers to January, February, March)\
-Q2 refers to April, May, June, Q3 to July, August, September and Q4 to October, November, December"
+the number of days spent travelling and the distance travelled in km per month. Finally, you can see the \
+number of hours spent travelling per activity and per month and year. \
+All the information we extracted is visible on the following tables. "
 
 ERRORS = []
 
@@ -129,39 +127,64 @@ def process(file_data):
                             break
 
                         activities = _activity_type_duration(data)
+                        
                         results.append({
                             "Year": year,
                             "Month": month,
                             "Type": dict(itertools.islice(activities.items(), 50)),
-                            "Activity Duration [days]": round(_activity_duration(data), 3),
-                            "Activity Distance [km]": round(_activity_distance(data), 3)
+                            "Duration [days]": round(_activity_duration(data), 3),
+                            "Distance [km]": round(_activity_distance(data), 3)
                         })
                         break
 
-                        
-
     # Put results in DataFrame
     data_frame = pd.json_normalize(results)
+    data_frame_overall = pd.DataFrame()
+    DF_dict= dict()
+    activityName=""
+    
     if data_frame.empty:
         ERRORS.append("Empty dataframe")
-
+    else:
+        
+        data_frame_overall = data_frame[["Year", "Month", "Duration [days]", "Distance [km]"]]
+    
+        #rename the columns
+        data_frame.columns = data_frame.columns.str.replace('Type.', '')
+                
+        for activity in activities.keys():
+            data_frame_activity = data_frame[["Year", "Month", activity]]
+            data_frame_activity = data_frame_activity.rename(columns={activity: "Nr. of hours"}, errors="raise")
+            
+            activityName=activity.lower()
+            if "_" in activityName:
+                activityName = activityName.split("_")[1]
+                activityName = "Travelled by " + activityName
+            elif activityName == "cycling":
+                activityName = "Travelled by bike"
+            elif activityName == "flying":
+                activityName = "Travelled by plane"
+                
+            DF_dict[activityName] = data_frame_activity.fillna(0)
+    
+    
     #output results in a csv file
     
-    data_frame.fillna(0).to_csv("result.csv")
+    #data_frame.fillna(0).to_csv("result.csv")
+    
+    # for k, v in DF_dict:            
+    #     print(activityName)
+    #     print(v.to_string(index=False))
+        
     return {
         "summary": TEXT,
-        "data_frames": [
-            data_frame.fillna(0)
-        ],
+        "data_frame": 
+            data_frame_overall,
+        "data_frames_activity": 
+            DF_dict,
         "errors": [ERRORS]
     }
 
-    # return {
-    #     "summary": TEXT,
-    #     "data_frames": [
-    #         data_frame.fillna(0)
-    #     ]
-    # }
 
 #### This function takes as an input a dataframe, sums the values per column and returns the top columns based on the sum
 
@@ -178,74 +201,6 @@ def _top_cols(dftemp,ncols):
     
     return dftemp[top_cols]
 
-#This function takes as input the resulting dataFrame and prints a barplot of time spent per activity per year
-# def activitiesPerYear(dataFrame):
-#     """Plot time spent in hours per activity per year
-#     Args:
-#         dftemp (dataframe)
-#     Returns:
-#         prints the plot
-#     """
-    
-#     df = dataFrame.drop(columns=['Activity Duration [days]', 'Activity Distance [km]'])
-#     actitvities = df.loc[:,df.columns.str.startswith("Type.")].columns
-    
-#     df = df.groupby(['Year'], as_index =False).sum()
-#     print(df)
-    
-#     df.plot(x="Year", y=actitvities, kind="barh",figsize=(9,8))
-#     plt.xlabel("hours")
-#     plt.show()
-    
-    
-#This function takes as input the resulting dataFrame and prints a barplot of time spent per top N activity per quarter
-def activities_quarter_plot(dataFrame, N):
-    """Plot time spent in hours per top activities (overall top) per quarter
-    Args:
-        dftemp (dataframe)
-    Returns:
-        prints the plot
-    """
-    
-    #Drop columns 'Activity Duration [days]', 'Activity Distance [km]
-    df = dataFrame.drop(columns=['Activity Duration [days]', 'Activity Distance [km]'])
-    
-    #If column Type.UNKNOWN_ACTIVITY_TYPE exists then drop it from the plot
-    if 'Type.UNKNOWN_ACTIVITY_TYPE' in df.columns:
-        df = df.drop(columns=['Type.UNKNOWN_ACTIVITY_TYPE'])
-
-    #Q1 refers to the first three months, that is January, February and March
-    #Q2 refers to the April, May, June
-    #Q3 refers to July, August, September
-    #Q4 refers to October, November and December
-    
-    Q1 = MONTHS[0:3]
-    Q2 = MONTHS[3:6]
-    Q3 = MONTHS[6:9]
-    Q4 = MONTHS[9:12]
-    
-    df['Quarter'] = df['Month']
-                             
-    df['Quarter'].loc[df['Quarter'].isin(Q1)] = 'Q1'
-    df['Quarter'].loc[df['Quarter'].isin(Q2)] = 'Q2'
-    df['Quarter'].loc[df['Quarter'].isin(Q3)] = 'Q3'
-    df['Quarter'].loc[df['Quarter'].isin(Q4)] = 'Q4'
-    
-    df['Year_quarter'] = df['Month']
-    df['Year_quarter'] = df['Year'].astype(str)+'_'+df['Quarter']
-        
-    df = df.groupby(['Year_quarter'], as_index =False).sum()
-    yearQuarter = df['Year_quarter']
-    
-    #keep only the top N activities based on the time spent overall
-    df = _top_cols(df.iloc[:, 2:], N)
-    topActivities = df.columns
-    df = df.join(yearQuarter) 
-    
-    color = ["#4477AA", "#CCBB44", "#66CCEE", "#AA3377", "#228833"]
-            
-    df.plot(x="Year_quarter", y=topActivities, kind="barh",figsize=(10, 8), width=0.7, color = color).set(xlabel='hours',
-         ylabel='year_quarter')
 
 
 
