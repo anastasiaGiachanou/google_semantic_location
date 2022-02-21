@@ -30,6 +30,7 @@ number of hours spent travelling per activity and per month and year. \
 All the information we extracted is visible on the following tables. "
 
 ERRORS = []
+activitiesAll = []
 
 def _activity_type_duration(data):
     """Get duration per activity type
@@ -127,6 +128,7 @@ def process(file_data):
                             break
 
                         activities = _activity_type_duration(data)
+                        activitiesAll.extend(activities.keys())
                         
                         results.append({
                             "Year": year,
@@ -141,18 +143,17 @@ def process(file_data):
     data_frame = pd.json_normalize(results)
     data_frame_overall = pd.DataFrame()
     DF_dict= dict()
-    activityName=""
     
     if data_frame.empty:
         ERRORS.append("Empty dataframe")
     else:
-        
+        activitiesSet = set(activitiesAll)
         data_frame_overall = data_frame[["Year", "Month", "Duration [days]", "Distance [km]"]]
     
         #rename the columns
         data_frame.columns = data_frame.columns.str.replace('Type.', '')
-                
-        for activity in activities.keys():
+        
+        for activity in activitiesSet:
             data_frame_activity = data_frame[["Year", "Month", activity]]
             data_frame_activity = data_frame_activity.rename(columns={activity: "Nr. of hours"}, errors="raise")
             
@@ -168,13 +169,13 @@ def process(file_data):
             DF_dict[activityName] = data_frame_activity.fillna(0)
     
     
-    #output results in a csv file
+    # #output results in a csv file
     
-    #data_frame.fillna(0).to_csv("result.csv")
+    # data_frame.fillna(0).to_csv("result.csv")
     
     # for k, v in DF_dict:            
-    #     print(activityName)
-    #     print(v.to_string(index=False))
+    # #     print(activityName)
+    # #     print(v.to_string(index=False))
         
     return [
         {
