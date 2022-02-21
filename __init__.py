@@ -176,7 +176,8 @@ def process(file_data):
     #     print(activityName)
     #     print(v.to_string(index=False))
         
-    return {
+    return [
+        {
         "summary": TEXT,
         "data_frame": 
             data_frame_overall,
@@ -184,6 +185,7 @@ def process(file_data):
             DF_dict,
         "errors": [ERRORS]
     }
+    ]
 
 
 #### This function takes as an input a dataframe, sums the values per column and returns the top columns based on the sum
