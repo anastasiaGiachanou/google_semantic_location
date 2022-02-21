@@ -152,8 +152,9 @@ def process(file_data):
     
         #rename the columns
         data_frame.columns = data_frame.columns.str.replace('Type.', '')
-        
+        print (activitiesSet)
         for activity in activitiesSet:
+            
             data_frame_activity = data_frame[["Year", "Month", activity]]
             data_frame_activity = data_frame_activity.rename(columns={activity: "Nr. of hours"}, errors="raise")
             
@@ -163,6 +164,8 @@ def process(file_data):
                 activityName = "Travelled by " + activityName
                 if "passenger" in activityName:
                     activityName = "Travelled by passenger vehicle"
+                if activityName == "Travelled by activity":
+                    activityName = "unknown activity type"
             elif activityName == "cycling":
                 activityName = "Travelled by bike"
             elif activityName == "flying":
@@ -173,11 +176,10 @@ def process(file_data):
     
     # #output results in a csv file
     
-    # data_frame.fillna(0).to_csv("result.csv")
+    # data_frame.fillna(0).to_csv("resultPerson2.csv")
     
     # for k, v in DF_dict:            
-    # #     print(activityName)
-    # #     print(v.to_string(index=False))
+    #     v.to_csv("resultPerson2.csv")
         
     return [
         {
