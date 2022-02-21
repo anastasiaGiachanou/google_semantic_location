@@ -161,6 +161,8 @@ def process(file_data):
             if "_" in activityName:
                 activityName = activityName.split("_")[1]
                 activityName = "Travelled by " + activityName
+                if "passenger" in activityName:
+                    activityName = "Travelled by passenger vehicle"
             elif activityName == "cycling":
                 activityName = "Travelled by bike"
             elif activityName == "flying":
