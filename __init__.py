@@ -134,8 +134,8 @@ def process(file_data):
                             "Year": year,
                             "Month": month,
                             "Type": dict(itertools.islice(activities.items(), 50)),
-                            "Duration [days]": round(_activity_duration(data), 3),
-                            "Distance [km]": round(_activity_distance(data), 3)
+                            "Duration [days]": round(_activity_duration(data), 2),
+                            "Distance [km]": round(_activity_distance(data), 2)
                         })
                         break
 
@@ -152,11 +152,12 @@ def process(file_data):
     
         #rename the columns
         data_frame.columns = data_frame.columns.str.replace('Type.', '')
-        print (activitiesSet)
+
         for activity in activitiesSet:
             
             data_frame_activity = data_frame[["Year", "Month", activity]]
             data_frame_activity = data_frame_activity.rename(columns={activity: "Nr. of hours"}, errors="raise")
+            data_frame_activity = data_frame_activity.round(2)
             
             activityName=activity.lower()
             if "_" in activityName:
