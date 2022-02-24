@@ -1,0 +1,763 @@
+Summary:
+ This study examines the total amount of time spent in activities before and during the COVID-19 pandemic. We therefore examined your Google semantic Location History data for 2016, 2017, 2018, 2019, 2020, and 2021. To be precise, we extracted per month and per year the total hours spent in activities as those were recorded by Google such as walking, cycling and running. Also, we extracted the number of days spent travelling and the distance travelled in km per month. Finally, you can see the number of hours spent travelling per activity and per month and year. All the information we extracted is visible on the following tables. 
+
+Total duration and distance for all the activities
+  Year     Month  Duration [days]  Distance [km]
+ 2016   JANUARY             0.71         378.68
+ 2016  FEBRUARY             4.18        5581.72
+ 2016     MARCH             5.30        3697.74
+ 2016       MAY             7.77       19323.07
+ 2016      JUNE             2.36        5005.93
+ 2016      JULY             5.46        9002.77
+ 2016    AUGUST             4.40        8748.95
+ 2016 SEPTEMBER             3.57        2636.24
+ 2016   OCTOBER             5.11        4972.60
+ 2016  NOVEMBER             2.98        1100.49
+ 2016  DECEMBER             2.82        6155.77
+ 2017   JANUARY             2.44        2448.72
+ 2017  FEBRUARY             5.10       18247.72
+ 2017     MARCH             3.82        4087.88
+ 2017     APRIL             5.45        1163.32
+ 2017       MAY            12.67        1212.47
+ 2017      JUNE             1.03         147.74
+ 2017      JULY             1.22         168.30
+ 2017    AUGUST             4.19       19230.72
+ 2017 SEPTEMBER             2.18        1273.05
+ 2017   OCTOBER            15.86        2187.68
+ 2017  NOVEMBER             8.15        3946.06
+ 2017  DECEMBER            15.22        2227.49
+ 2018   JANUARY            21.10         144.05
+ 2018  FEBRUARY             4.68         738.15
+ 2018     MARCH             8.59        2088.15
+ 2018     APRIL             6.68        2087.60
+ 2018       MAY            12.17        1454.29
+ 2018      JUNE             9.15        4153.99
+ 2018      JULY            11.09        4870.81
+ 2018    AUGUST             7.80         808.71
+ 2018 SEPTEMBER            11.38        1704.29
+ 2018   OCTOBER             7.63        3668.67
+ 2018  NOVEMBER             1.64        1385.58
+ 2018  DECEMBER             2.36        4584.82
+ 2019   JANUARY             1.32        2053.08
+ 2019  FEBRUARY             3.28       19177.11
+ 2019     MARCH             1.17         805.04
+ 2019     APRIL             2.12        3617.94
+ 2019       MAY             2.75         668.16
+ 2019      JUNE             4.77        1384.28
+ 2019      JULY             3.57        3047.09
+ 2019    AUGUST             1.84        2614.69
+ 2019 SEPTEMBER             3.00        1539.40
+ 2019   OCTOBER             2.00        1744.22
+ 2019  NOVEMBER             3.73         520.98
+ 2019  DECEMBER             1.14        2099.95
+ 2020   JANUARY             2.04        2712.84
+ 2020  FEBRUARY             2.03        1106.34
+ 2020     MARCH             0.45         403.43
+ 2020     APRIL             0.22          25.26
+
+Duration per activity:
+
+Travelled by passenger vehicle
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          0.00
+ 2016  DECEMBER          4.81
+ 2017   JANUARY          4.18
+ 2017  FEBRUARY         30.75
+ 2017     MARCH         19.53
+ 2017     APRIL         51.36
+ 2017       MAY         13.15
+ 2017      JUNE          1.60
+ 2017      JULY          0.00
+ 2017    AUGUST          3.99
+ 2017 SEPTEMBER          1.92
+ 2017   OCTOBER          2.58
+ 2017  NOVEMBER          3.82
+ 2017  DECEMBER          2.50
+ 2018   JANUARY          3.43
+ 2018  FEBRUARY          1.20
+ 2018     MARCH         13.50
+ 2018     APRIL          3.23
+ 2018       MAY          2.84
+ 2018      JUNE         16.33
+ 2018      JULY         22.15
+ 2018    AUGUST          7.64
+ 2018 SEPTEMBER          6.05
+ 2018   OCTOBER         21.25
+ 2018  NOVEMBER          2.19
+ 2018  DECEMBER          4.36
+ 2019   JANUARY          6.21
+ 2019  FEBRUARY         10.46
+ 2019     MARCH          2.48
+ 2019     APRIL         10.77
+ 2019       MAY          5.22
+ 2019      JUNE         17.00
+ 2019      JULY         19.31
+ 2019    AUGUST          6.71
+ 2019 SEPTEMBER         13.34
+ 2019   OCTOBER          0.76
+ 2019  NOVEMBER          0.12
+ 2019  DECEMBER          7.06
+ 2020   JANUARY         11.15
+ 2020  FEBRUARY          0.11
+ 2020     MARCH          2.36
+ 2020     APRIL          0.00
+
+Travelled by bike
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          5.31
+ 2016  DECEMBER         13.00
+ 2017   JANUARY          8.86
+ 2017  FEBRUARY         13.41
+ 2017     MARCH         12.43
+ 2017     APRIL         16.47
+ 2017       MAY         30.00
+ 2017      JUNE          7.12
+ 2017      JULY          7.37
+ 2017    AUGUST         10.48
+ 2017 SEPTEMBER          5.34
+ 2017   OCTOBER         14.71
+ 2017  NOVEMBER          7.91
+ 2017  DECEMBER         10.38
+ 2018   JANUARY          1.29
+ 2018  FEBRUARY         10.28
+ 2018     MARCH         17.29
+ 2018     APRIL         14.71
+ 2018       MAY         18.48
+ 2018      JUNE         17.95
+ 2018      JULY          3.74
+ 2018    AUGUST         19.40
+ 2018 SEPTEMBER          8.74
+ 2018   OCTOBER          6.73
+ 2018  NOVEMBER         16.77
+ 2018  DECEMBER         15.94
+ 2019   JANUARY          6.04
+ 2019  FEBRUARY         10.14
+ 2019     MARCH          9.41
+ 2019     APRIL         14.91
+ 2019       MAY         15.79
+ 2019      JUNE         11.40
+ 2019      JULY         27.88
+ 2019    AUGUST         11.98
+ 2019 SEPTEMBER         19.57
+ 2019   OCTOBER          8.04
+ 2019  NOVEMBER          3.30
+ 2019  DECEMBER          2.85
+ 2020   JANUARY         10.88
+ 2020  FEBRUARY          4.80
+ 2020     MARCH          0.59
+ 2020     APRIL          4.47
+
+skiing
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          0.00
+ 2016  DECEMBER          0.00
+ 2017   JANUARY          0.00
+ 2017  FEBRUARY          0.00
+ 2017     MARCH          0.00
+ 2017     APRIL          0.00
+ 2017       MAY          0.00
+ 2017      JUNE          0.00
+ 2017      JULY          0.00
+ 2017    AUGUST          0.00
+ 2017 SEPTEMBER          0.00
+ 2017   OCTOBER          0.00
+ 2017  NOVEMBER          0.00
+ 2017  DECEMBER          0.00
+ 2018   JANUARY          0.00
+ 2018  FEBRUARY          0.00
+ 2018     MARCH          0.13
+ 2018     APRIL          0.00
+ 2018       MAY          0.00
+ 2018      JUNE          0.00
+ 2018      JULY          0.00
+ 2018    AUGUST          0.00
+ 2018 SEPTEMBER          0.00
+ 2018   OCTOBER          0.00
+ 2018  NOVEMBER          0.00
+ 2018  DECEMBER          0.00
+ 2019   JANUARY          0.00
+ 2019  FEBRUARY          0.00
+ 2019     MARCH          0.00
+ 2019     APRIL          0.00
+ 2019       MAY          0.00
+ 2019      JUNE          0.00
+ 2019      JULY          0.00
+ 2019    AUGUST          0.00
+ 2019 SEPTEMBER          0.00
+ 2019   OCTOBER          0.00
+ 2019  NOVEMBER          0.00
+ 2019  DECEMBER          0.00
+ 2020   JANUARY          0.00
+ 2020  FEBRUARY          0.00
+ 2020     MARCH          0.00
+ 2020     APRIL          0.00
+
+Travelled by train
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.93
+ 2016     MARCH          3.36
+ 2016       MAY          1.36
+ 2016      JUNE          0.72
+ 2016      JULY          2.22
+ 2016    AUGUST          2.13
+ 2016 SEPTEMBER         10.51
+ 2016   OCTOBER          6.14
+ 2016  NOVEMBER          5.63
+ 2016  DECEMBER         12.88
+ 2017   JANUARY         13.31
+ 2017  FEBRUARY         12.79
+ 2017     MARCH         19.59
+ 2017     APRIL         11.93
+ 2017       MAY         18.35
+ 2017      JUNE          0.00
+ 2017      JULY          0.00
+ 2017    AUGUST          6.30
+ 2017 SEPTEMBER         16.82
+ 2017   OCTOBER         10.63
+ 2017  NOVEMBER         10.44
+ 2017  DECEMBER          8.64
+ 2018   JANUARY          0.00
+ 2018  FEBRUARY          4.33
+ 2018     MARCH          3.87
+ 2018     APRIL          5.74
+ 2018       MAY         11.13
+ 2018      JUNE         14.38
+ 2018      JULY         18.46
+ 2018    AUGUST          3.80
+ 2018 SEPTEMBER         16.19
+ 2018   OCTOBER         14.76
+ 2018  NOVEMBER         15.61
+ 2018  DECEMBER          8.59
+ 2019   JANUARY          9.45
+ 2019  FEBRUARY         24.47
+ 2019     MARCH          8.30
+ 2019     APRIL         10.15
+ 2019       MAY          4.47
+ 2019      JUNE          4.27
+ 2019      JULY         21.06
+ 2019    AUGUST         12.56
+ 2019 SEPTEMBER         14.40
+ 2019   OCTOBER         21.60
+ 2019  NOVEMBER          5.91
+ 2019  DECEMBER          4.94
+ 2020   JANUARY         14.39
+ 2020  FEBRUARY         28.13
+ 2020     MARCH          5.49
+ 2020     APRIL          0.00
+
+Travelled by plane
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          0.00
+ 2016  DECEMBER         12.67
+ 2017   JANUARY          7.45
+ 2017  FEBRUARY         12.40
+ 2017     MARCH          6.17
+ 2017     APRIL          0.00
+ 2017       MAY          0.00
+ 2017      JUNE          0.00
+ 2017      JULY          0.00
+ 2017    AUGUST         23.56
+ 2017 SEPTEMBER          0.00
+ 2017   OCTOBER          2.93
+ 2017  NOVEMBER          5.03
+ 2017  DECEMBER          1.88
+ 2018   JANUARY          0.00
+ 2018  FEBRUARY          0.00
+ 2018     MARCH          3.13
+ 2018     APRIL         31.03
+ 2018       MAY          0.00
+ 2018      JUNE          9.68
+ 2018      JULY          6.60
+ 2018    AUGUST          0.00
+ 2018 SEPTEMBER          0.00
+ 2018   OCTOBER          4.86
+ 2018  NOVEMBER          0.00
+ 2018  DECEMBER         12.32
+ 2019   JANUARY          2.59
+ 2019  FEBRUARY         24.66
+ 2019     MARCH          0.00
+ 2019     APRIL          2.66
+ 2019       MAY          0.00
+ 2019      JUNE          1.32
+ 2019      JULY          7.96
+ 2019    AUGUST          3.56
+ 2019 SEPTEMBER          0.00
+ 2019   OCTOBER          0.00
+ 2019  NOVEMBER          0.00
+ 2019  DECEMBER          1.95
+ 2020   JANUARY          3.20
+ 2020  FEBRUARY          0.00
+ 2020     MARCH          0.00
+ 2020     APRIL          0.00
+
+Travelled by ferry
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          0.00
+ 2016  DECEMBER          0.00
+ 2017   JANUARY          0.00
+ 2017  FEBRUARY          0.00
+ 2017     MARCH          0.00
+ 2017     APRIL          0.00
+ 2017       MAY          0.00
+ 2017      JUNE          0.00
+ 2017      JULY          0.00
+ 2017    AUGUST          0.00
+ 2017 SEPTEMBER          0.00
+ 2017   OCTOBER          0.00
+ 2017  NOVEMBER          0.00
+ 2017  DECEMBER          0.00
+ 2018   JANUARY          0.00
+ 2018  FEBRUARY          0.00
+ 2018     MARCH          0.00
+ 2018     APRIL          0.00
+ 2018       MAY          0.00
+ 2018      JUNE          0.00
+ 2018      JULY          0.00
+ 2018    AUGUST          0.00
+ 2018 SEPTEMBER          0.00
+ 2018   OCTOBER          0.00
+ 2018  NOVEMBER          0.00
+ 2018  DECEMBER          0.26
+ 2019   JANUARY          0.00
+ 2019  FEBRUARY          0.00
+ 2019     MARCH          0.00
+ 2019     APRIL          0.00
+ 2019       MAY          0.00
+ 2019      JUNE          0.00
+ 2019      JULY          0.00
+ 2019    AUGUST          0.00
+ 2019 SEPTEMBER          0.00
+ 2019   OCTOBER          0.00
+ 2019  NOVEMBER          0.00
+ 2019  DECEMBER          0.00
+ 2020   JANUARY          0.00
+ 2020  FEBRUARY          0.36
+ 2020     MARCH          0.00
+ 2020     APRIL          0.00
+
+Travelled by bus
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          2.06
+ 2016       MAY          2.82
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.98
+ 2016 SEPTEMBER          2.28
+ 2016   OCTOBER          0.22
+ 2016  NOVEMBER          2.95
+ 2016  DECEMBER          3.39
+ 2017   JANUARY         10.66
+ 2017  FEBRUARY          3.47
+ 2017     MARCH          5.95
+ 2017     APRIL          4.89
+ 2017       MAY          3.68
+ 2017      JUNE          0.47
+ 2017      JULY          0.00
+ 2017    AUGUST          3.66
+ 2017 SEPTEMBER          1.04
+ 2017   OCTOBER          1.74
+ 2017  NOVEMBER          2.93
+ 2017  DECEMBER          2.72
+ 2018   JANUARY          0.55
+ 2018  FEBRUARY          0.52
+ 2018     MARCH          0.28
+ 2018     APRIL          0.00
+ 2018       MAY          0.40
+ 2018      JUNE          0.86
+ 2018      JULY          3.55
+ 2018    AUGUST          0.07
+ 2018 SEPTEMBER          1.74
+ 2018   OCTOBER          4.54
+ 2018  NOVEMBER          0.60
+ 2018  DECEMBER          0.31
+ 2019   JANUARY          2.13
+ 2019  FEBRUARY          0.35
+ 2019     MARCH          0.00
+ 2019     APRIL          3.66
+ 2019       MAY          0.00
+ 2019      JUNE          0.00
+ 2019      JULY          0.37
+ 2019    AUGUST          0.60
+ 2019 SEPTEMBER          0.42
+ 2019   OCTOBER          3.03
+ 2019  NOVEMBER          4.53
+ 2019  DECEMBER          2.53
+ 2020   JANUARY          4.23
+ 2020  FEBRUARY          4.18
+ 2020     MARCH          1.13
+ 2020     APRIL          0.00
+
+Travelled by tram
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          5.77
+ 2016     MARCH         18.17
+ 2016       MAY          0.95
+ 2016      JUNE          6.24
+ 2016      JULY          2.20
+ 2016    AUGUST          1.62
+ 2016 SEPTEMBER          0.91
+ 2016   OCTOBER          1.45
+ 2016  NOVEMBER          1.83
+ 2016  DECEMBER          1.97
+ 2017   JANUARY          1.62
+ 2017  FEBRUARY          0.86
+ 2017     MARCH          2.14
+ 2017     APRIL          2.12
+ 2017       MAY          2.90
+ 2017      JUNE          0.60
+ 2017      JULY          0.63
+ 2017    AUGUST          0.07
+ 2017 SEPTEMBER          1.54
+ 2017   OCTOBER          0.00
+ 2017  NOVEMBER          0.92
+ 2017  DECEMBER          1.29
+ 2018   JANUARY          0.30
+ 2018  FEBRUARY          0.35
+ 2018     MARCH          1.19
+ 2018     APRIL         11.50
+ 2018       MAY          0.40
+ 2018      JUNE          0.00
+ 2018      JULY          0.00
+ 2018    AUGUST          1.92
+ 2018 SEPTEMBER          1.53
+ 2018   OCTOBER          1.69
+ 2018  NOVEMBER          0.26
+ 2018  DECEMBER          3.42
+ 2019   JANUARY          1.37
+ 2019  FEBRUARY          1.08
+ 2019     MARCH          2.17
+ 2019     APRIL          0.32
+ 2019       MAY          0.75
+ 2019      JUNE          0.50
+ 2019      JULY          1.46
+ 2019    AUGUST          2.17
+ 2019 SEPTEMBER          1.20
+ 2019   OCTOBER          0.81
+ 2019  NOVEMBER          0.78
+ 2019  DECEMBER          2.00
+ 2020   JANUARY          0.95
+ 2020  FEBRUARY          1.91
+ 2020     MARCH          0.18
+ 2020     APRIL          0.00
+
+motorcycling
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          0.00
+ 2016  DECEMBER          0.00
+ 2017   JANUARY          0.00
+ 2017  FEBRUARY          0.00
+ 2017     MARCH          0.53
+ 2017     APRIL          0.00
+ 2017       MAY          1.44
+ 2017      JUNE          0.00
+ 2017      JULY          0.00
+ 2017    AUGUST          0.00
+ 2017 SEPTEMBER          0.00
+ 2017   OCTOBER          0.00
+ 2017  NOVEMBER          0.00
+ 2017  DECEMBER          0.00
+ 2018   JANUARY          0.00
+ 2018  FEBRUARY          0.00
+ 2018     MARCH          0.00
+ 2018     APRIL          0.00
+ 2018       MAY          0.00
+ 2018      JUNE          0.00
+ 2018      JULY          0.00
+ 2018    AUGUST          0.00
+ 2018 SEPTEMBER          0.00
+ 2018   OCTOBER          0.00
+ 2018  NOVEMBER          0.00
+ 2018  DECEMBER          0.99
+ 2019   JANUARY          0.00
+ 2019  FEBRUARY          0.00
+ 2019     MARCH          0.00
+ 2019     APRIL          0.00
+ 2019       MAY          0.00
+ 2019      JUNE          0.00
+ 2019      JULY          0.00
+ 2019    AUGUST          0.00
+ 2019 SEPTEMBER          0.00
+ 2019   OCTOBER          0.00
+ 2019  NOVEMBER          0.00
+ 2019  DECEMBER          0.00
+ 2020   JANUARY          0.00
+ 2020  FEBRUARY          0.00
+ 2020     MARCH          0.00
+ 2020     APRIL          0.00
+
+running
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          0.00
+ 2016  DECEMBER          0.00
+ 2017   JANUARY          0.00
+ 2017  FEBRUARY          0.00
+ 2017     MARCH          0.00
+ 2017     APRIL          1.79
+ 2017       MAY          0.78
+ 2017      JUNE          0.00
+ 2017      JULY          4.69
+ 2017    AUGUST          4.11
+ 2017 SEPTEMBER          1.01
+ 2017   OCTOBER          0.94
+ 2017  NOVEMBER          0.00
+ 2017  DECEMBER          2.11
+ 2018   JANUARY          2.40
+ 2018  FEBRUARY          2.18
+ 2018     MARCH         23.45
+ 2018     APRIL          4.22
+ 2018       MAY          4.37
+ 2018      JUNE          3.01
+ 2018      JULY          3.09
+ 2018    AUGUST          7.84
+ 2018 SEPTEMBER          3.85
+ 2018   OCTOBER          3.08
+ 2018  NOVEMBER          0.67
+ 2018  DECEMBER          1.10
+ 2019   JANUARY          1.31
+ 2019  FEBRUARY          1.35
+ 2019     MARCH          1.05
+ 2019     APRIL          5.10
+ 2019       MAY          1.75
+ 2019      JUNE          1.00
+ 2019      JULY          0.00
+ 2019    AUGUST          0.42
+ 2019 SEPTEMBER          0.61
+ 2019   OCTOBER          0.00
+ 2019  NOVEMBER          0.00
+ 2019  DECEMBER          0.00
+ 2020   JANUARY          0.00
+ 2020  FEBRUARY          0.00
+ 2020     MARCH          0.00
+ 2020     APRIL          0.00
+
+walking
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.00
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          6.22
+ 2016  DECEMBER         18.57
+ 2017   JANUARY         12.12
+ 2017  FEBRUARY         23.81
+ 2017     MARCH         23.39
+ 2017     APRIL         41.56
+ 2017       MAY         61.94
+ 2017      JUNE         14.86
+ 2017      JULY         16.48
+ 2017    AUGUST         11.47
+ 2017 SEPTEMBER          8.60
+ 2017   OCTOBER         10.64
+ 2017  NOVEMBER         15.95
+ 2017  DECEMBER          6.93
+ 2018   JANUARY          3.44
+ 2018  FEBRUARY         33.97
+ 2018     MARCH         11.63
+ 2018     APRIL          4.14
+ 2018       MAY         18.36
+ 2018      JUNE          7.44
+ 2018      JULY          6.71
+ 2018    AUGUST          5.58
+ 2018 SEPTEMBER          7.74
+ 2018   OCTOBER          8.22
+ 2018  NOVEMBER          3.37
+ 2018  DECEMBER          9.34
+ 2019   JANUARY          2.50
+ 2019  FEBRUARY          4.63
+ 2019     MARCH          4.78
+ 2019     APRIL          3.41
+ 2019       MAY          4.38
+ 2019      JUNE          5.56
+ 2019      JULY          7.14
+ 2019    AUGUST          6.10
+ 2019 SEPTEMBER         22.43
+ 2019   OCTOBER          7.26
+ 2019  NOVEMBER          1.72
+ 2019  DECEMBER          5.13
+ 2020   JANUARY          3.98
+ 2020  FEBRUARY          9.17
+ 2020     MARCH          0.94
+ 2020     APRIL          0.78
+
+Travelled by subway
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.00
+ 2016  FEBRUARY          0.00
+ 2016     MARCH          0.00
+ 2016       MAY          0.00
+ 2016      JUNE          0.59
+ 2016      JULY          0.00
+ 2016    AUGUST          0.11
+ 2016 SEPTEMBER          0.09
+ 2016   OCTOBER          0.13
+ 2016  NOVEMBER          0.77
+ 2016  DECEMBER          0.39
+ 2017   JANUARY          0.47
+ 2017  FEBRUARY          0.15
+ 2017     MARCH          2.02
+ 2017     APRIL          0.71
+ 2017       MAY          0.00
+ 2017      JUNE          0.00
+ 2017      JULY          0.00
+ 2017    AUGUST          0.07
+ 2017 SEPTEMBER          0.00
+ 2017   OCTOBER          0.00
+ 2017  NOVEMBER          0.17
+ 2017  DECEMBER          0.00
+ 2018   JANUARY          0.00
+ 2018  FEBRUARY          0.00
+ 2018     MARCH          0.00
+ 2018     APRIL          0.00
+ 2018       MAY          0.00
+ 2018      JUNE          0.49
+ 2018      JULY          0.00
+ 2018    AUGUST          0.26
+ 2018 SEPTEMBER          0.06
+ 2018   OCTOBER          0.06
+ 2018  NOVEMBER          0.00
+ 2018  DECEMBER          0.00
+ 2019   JANUARY          0.00
+ 2019  FEBRUARY          1.52
+ 2019     MARCH          0.00
+ 2019     APRIL          0.00
+ 2019       MAY          0.03
+ 2019      JUNE          0.00
+ 2019      JULY          0.00
+ 2019    AUGUST          0.00
+ 2019 SEPTEMBER          0.00
+ 2019   OCTOBER          0.09
+ 2019  NOVEMBER          0.00
+ 2019  DECEMBER          0.94
+ 2020   JANUARY          0.16
+ 2020  FEBRUARY          0.00
+ 2020     MARCH          0.00
+ 2020     APRIL          0.00
+
+unknown activity type
+ Year     Month  Nr. of hours
+ 2016   JANUARY          0.26
+ 2016  FEBRUARY          1.09
+ 2016     MARCH          0.00
+ 2016       MAY        103.89
+ 2016      JUNE          2.57
+ 2016      JULY          0.00
+ 2016    AUGUST          0.00
+ 2016 SEPTEMBER          0.00
+ 2016   OCTOBER          0.00
+ 2016  NOVEMBER          0.00
+ 2016  DECEMBER          0.00
+ 2017   JANUARY          0.00
+ 2017  FEBRUARY         24.67
+ 2017     MARCH          0.00
+ 2017     APRIL          0.00
+ 2017       MAY        171.79
+ 2017      JUNE          0.00
+ 2017      JULY          0.00
+ 2017    AUGUST         36.92
+ 2017 SEPTEMBER         16.06
+ 2017   OCTOBER        336.44
+ 2017  NOVEMBER        148.50
+ 2017  DECEMBER        328.93
+ 2018   JANUARY        494.93
+ 2018  FEBRUARY         59.39
+ 2018     MARCH        131.59
+ 2018     APRIL         85.72
+ 2018       MAY        236.06
+ 2018      JUNE        149.44
+ 2018      JULY        201.96
+ 2018    AUGUST        140.75
+ 2018 SEPTEMBER        227.21
+ 2018   OCTOBER        118.01
+ 2018  NOVEMBER          0.00
+ 2018  DECEMBER          0.00
+ 2019   JANUARY          0.00
+ 2019  FEBRUARY          0.00
+ 2019     MARCH          0.00
+ 2019     APRIL          0.00
+ 2019       MAY         33.57
+ 2019      JUNE         73.40
+ 2019      JULY          0.51
+ 2019    AUGUST          0.00
+ 2019 SEPTEMBER          0.00
+ 2019   OCTOBER          6.29
+ 2019  NOVEMBER         73.05
+ 2019  DECEMBER          0.00
+ 2020   JANUARY          0.00
+ 2020  FEBRUARY          0.00
+ 2020     MARCH          0.00
+ 2020     APRIL          0.00
+
+Errors:
+ [['There was a problem in processing the data regarding APRIL 2016']]
