@@ -41,10 +41,13 @@ def _activity_type_duration(data):
     """
     activityType_duration = []
     
-    #check if activityType is inside the duration part
     for data_unit in data["timelineObjects"]:
         if "activitySegment" in data_unit.keys():
+            
+            #check if duration is inside the activitySegment part
             if "duration" in data_unit["activitySegment"].keys():
+                
+                #check if activityType is inside the duration part
                 if "activityType" in data_unit["activitySegment"]["duration"].keys():
                     try:
                         activityType = data_unit["activitySegment"]["duration"]["activityType"]
@@ -56,6 +59,7 @@ def _activity_type_duration(data):
                             {activityType: (int(end_time) - int(start_time))/(1e3*60*60)})
                     except:
                         continue
+                    
                 #if there is no activityType in duration, then take the one from activitySegment
                 elif "activityType" in data_unit["activitySegment"].keys():
                     try:
