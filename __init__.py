@@ -40,16 +40,36 @@ def _activity_type_duration(data):
         dict: duration per activity type in hours
     """
     activityType_duration = []
+    
+    #check if activityType is inside the duration part
     for data_unit in data["timelineObjects"]:
         if "activitySegment" in data_unit.keys():
-            try:
-                activityType = data_unit["activitySegment"]["activityType"]
-                start_time = data_unit["activitySegment"]["duration"]["startTimestampMs"]
-                end_time = data_unit["activitySegment"]["duration"]["endTimestampMs"]
-                activityType_duration.append(
-                    {activityType: (int(end_time) - int(start_time))/(1e3*60*60)})
-            except:
-                continue
+            if "duration" in data_unit["activitySegment"].keys():
+                if "activityType" in data_unit["activitySegment"]["duration"].keys():
+                    try:
+                        activityType = data_unit["activitySegment"]["duration"]["activityType"]
+                        #check if the name of the activity contains only upper characters or underscore
+                        if activityType.isupper() or "_" in activityType:
+                            start_time = data_unit["activitySegment"]["duration"]["startTimestampMs"]
+                            end_time = data_unit["activitySegment"]["duration"]["endTimestampMs"]
+                            activityType_duration.append(
+                            {activityType: (int(end_time) - int(start_time))/(1e3*60*60)})
+                    except:
+                        continue
+                #if there is no activityType in duration, then take the one from activitySegment
+                elif "activityType" in data_unit["activitySegment"].keys():
+                    try:
+                        activityType = data_unit["activitySegment"]["activityType"]
+                        
+                        #check if the name of the activity contains only upper characters or underscore
+        
+                        if activityType.isupper() or "_" in activityType:
+                            start_time = data_unit["activitySegment"]["duration"]["startTimestampMs"]
+                            end_time = data_unit["activitySegment"]["duration"]["endTimestampMs"]
+                            activityType_duration.append(
+                            {activityType: (int(end_time) - int(start_time))/(1e3*60*60)})
+                    except:
+                        continue
             
     
     # list of activity types
@@ -152,28 +172,31 @@ def process(file_data):
     
         #rename the columns
         data_frame.columns = data_frame.columns.str.replace('Type.', '')
-
+        
         for activity in activitiesSet:
-            
-            data_frame_activity = data_frame[["Year", "Month", activity]]
-            data_frame_activity = data_frame_activity.rename(columns={activity: "Nr. of hours"}, errors="raise")
-            data_frame_activity = data_frame_activity.round(2)
-            
-            activityName=activity.lower()
-            if "_" in activityName:
-                activityName = activityName.split("_")[1]
-                activityName = "Travelled by " + activityName
-                if "passenger" in activityName:
-                    activityName = "Travelled by passenger vehicle"
-                if activityName == "Travelled by activity":
-                    activityName = "unknown activity type"
-            elif activityName == "cycling":
-                activityName = "Travelled by bike"
-            elif activityName == "flying":
-                activityName = "Travelled by plane"
+            try:
+                data_frame_activity = data_frame[["Year", "Month", activity]]
+                data_frame_activity = data_frame_activity.rename(columns={activity: "Nr. of hours"}, errors="raise")
+                data_frame_activity = data_frame_activity.round(2)
                 
-            DF_dict[activityName] = data_frame_activity.fillna(0)
-    
+                activityName=activity.lower()
+                if "_" in activityName:
+                    activityName = activityName.split("_")[1]
+                    activityName = "Travelled by " + activityName
+                    if "passenger" in activityName:
+                        activityName = "Travelled by passenger vehicle"
+                    if activityName == "Travelled by activity":
+                        activityName = "unknown activity type"
+                elif activityName == "cycling":
+                    activityName = "Travelled by bike"
+                elif activityName == "flying":
+                    activityName = "Travelled by plane"
+                    
+                DF_dict[activityName] = data_frame_activity.fillna(0)
+            except:
+                error_message = "There was a problem in processing the activity " + activity 
+                ERRORS.append(error_message)
+                continue
     
     # #output results in a csv file
     
